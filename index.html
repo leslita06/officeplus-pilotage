@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Office Plus · Tableaux de bord du dirigeant</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/leaflet.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="demo-bar"><span class="dot"></span><b>Données d'illustration</b><span class="hide-s"> · chiffres fictifs et cohérents entre eux, pour montrer le tableau de bord. Seuls les éléments marqués <i class="tag-reel">Réel</i> sont relevés.</span></div>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><img src="assets/logo.svg" alt="Office Plus"><span>Pilotage</span></div>
+    <nav id="nav">
+      <a href="#matin" data-p="matin"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span>Le matin</span></a>
+      <a href="#ventes" data-p="ventes"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><span>Ventes</span></a>
+      <a href="#clients" data-p="clients"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.6 5.2"/></svg><span>Clients</span><em id="nav-45"></em></a>
+      <a href="#stock" data-p="stock"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg><span>Stock</span><em id="nav-rupt" class="o"></em></a>
+      <a href="#commercial" data-p="commercial"><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg><span>Commercial</span></a>
+      <a href="#reseaux" data-p="reseaux"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Réseaux et site</span></a>
+    </nav>
+    <div class="side-foot">Mis à jour le <b id="maj"></b><br>Livraison le jour même<br>si commandé avant 10 h <i class="tag-reel">Réel</i></div>
+  </aside>
+  <main>
+    <header class="top">
+      <div class="titles"><div class="eyebrow" id="eyebrow"></div><h1 id="titre"></h1></div>
+      <div class="filters" id="filters">
+        <label><span>Période</span><select id="f-per">
+          <option value="mois">Mois en cours</option><option value="30j" selected>30 derniers jours</option><option value="90j">90 derniers jours</option><option value="12m">12 derniers mois</option></select></label>
+        <label><span>Catégorie</span><select id="f-cat"></select></label>
+        <label><span>Commune</span><select id="f-com"></select></label>
+        <label><span>Commercial</span><select id="f-vend"></select></label>
+        <button id="raz" class="ghost" title="Effacer les filtres">Effacer</button>
+      </div>
+    </header>
+    <div id="chips" class="chips"></div>
+    <section id="page"></section>
+    <footer class="foot">Office Plus · tableaux de bord du dirigeant · version de démonstration, données d'illustration</footer>
+  </main>
+</div>
+<div id="drawer" class="drawer" hidden><div class="dr-bg" data-close></div><div class="dr-panel" role="dialog" aria-modal="true"><button class="dr-x" data-close aria-label="Fermer">×</button><div id="dr-body"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="assets/chart.umd.min.js"></script>
+<script src="assets/leaflet.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
