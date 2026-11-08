@@ -414,6 +414,8 @@ function openRelance(s) {
   $('#drawer').hidden = false; document.body.style.overflow = 'hidden';
 }
 function closeDrawer() { $('#drawer').hidden = true; document.body.style.overflow = ''; }
+function majWa() { const w = document.getElementById('wa-f'); if (!w) return; const t = 'Office Plus · ' + (document.getElementById('titre') || {}).textContent + ' (tableau de bord de démonstration) : ' + location.href; w.href = 'https://wa.me/?text=' + encodeURIComponent(t); }
+window.addEventListener('hashchange', () => setTimeout(majWa, 50)); setTimeout(majWa, 400);
 function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('on'), 2200); }
 
 /* =========================================================
@@ -562,3 +564,6 @@ function reseaux() {
     options: { indexAxis: 'y', maintainAspectRatio: false, scales: { x: gridY(v => n0(v)), y: { grid: { display: false }, border: { display: false }, ticks: { color: '#111418' } } }, plugins: { tooltip: { callbacks: { label: i => ' ' + n0(i.raw) + ' abonnés' } } } } });
 }
 })();
+/* finitions 2 : l'onglet actif reste visible dans la barre du téléphone */
+(function () { const vis = () => { const a = document.querySelector('#nav a.on'); if (a && innerWidth <= 1020) { const n = document.getElementById('nav'); n.scrollTo({ left: Math.max(0, a.offsetLeft - 16), behavior: 'auto' }); } };
+  window.addEventListener('hashchange', () => setTimeout(vis, 60)); window.addEventListener('load', () => setTimeout(vis, 300)); })();

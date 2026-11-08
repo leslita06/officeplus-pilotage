@@ -22,6 +22,11 @@
       <a href="#commercial" data-p="commercial"><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg><span>Commercial</span></a>
       <a href="#reseaux" data-p="reseaux"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Réseaux et site</span></a>
     </nav>
+    <div class="side-lk"><small>Autres outils Office Plus</small>
+      <a href="https://leslita06.github.io/officeplus-maquette/#/admin"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Back-office des commandes</span></a>
+      <a href="https://leslita06.github.io/officeplus-maquette/#/photos"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg><span>Photos produits</span></a>
+      <a href="https://leslita06.github.io/officeplus-maquette/"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Voir le site</span></a>
+      <a href="https://leslita06.github.io/officeplus-catalogue/"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg><span>Catalogue</span></a></div>
     <div class="side-foot">Mis à jour le <b id="maj"></b><br>Livraison le jour même<br>si commandé avant 10 h <i class="tag-reel">Réel</i></div>
   </aside>
   <main>
@@ -33,16 +38,17 @@
         <label><span>Catégorie</span><select id="f-cat"></select></label>
         <label><span>Commune</span><select id="f-com"></select></label>
         <label><span>Commercial</span><select id="f-vend"></select></label>
-        <button id="raz" class="ghost" title="Effacer les filtres">Effacer</button>
+        <button id="raz" class="ghost" type="button">Effacer les filtres</button>
       </div>
     </header>
     <div id="chips" class="chips"></div>
     <section id="page"></section>
-    <footer class="foot">Office Plus · tableaux de bord du dirigeant · version de démonstration, données d'illustration</footer>
+    <footer class="foot"><nav class="foot-lk" aria-label="Autres outils"><a href="https://leslita06.github.io/officeplus-maquette/#/admin">Back-office des commandes</a><a href="https://leslita06.github.io/officeplus-maquette/#/photos">Photos produits</a><a href="https://leslita06.github.io/officeplus-maquette/">Voir le site</a><a href="https://leslita06.github.io/officeplus-catalogue/">Catalogue</a></nav>Office Plus · tableaux de bord du dirigeant · version de démonstration, données d'illustration</footer>
   </main>
 </div>
 <div id="drawer" class="drawer" hidden><div class="dr-bg" data-close></div><div class="dr-panel" role="dialog" aria-modal="true"><button class="dr-x" data-close aria-label="Fermer">×</button><div id="dr-body"></div></div></div>
 <div id="toast" class="toast"></div>
+<a class="wa-f" id="wa-f" href="https://wa.me/?text=Office%20Plus%20%C2%B7%20point%20du%20jour" target="_blank" rel="noopener" aria-label="Partager le point du jour sur WhatsApp"><svg viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg><span>Partager le point du jour</span></a>
 <script src="assets/chart.umd.min.js"></script>
 <script src="assets/leaflet.js"></script>
 <script src="assets/app.js"></script>
